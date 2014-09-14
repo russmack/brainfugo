@@ -10,7 +10,7 @@ A Go implementation of a Brainfuck interpreter.
 
 ## Usage
 ```
-go run gobrainfu.go helloworld.bf
+go run brainfugo.go helloworld.bf
 ```
 
 ## License
