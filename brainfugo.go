@@ -1,3 +1,4 @@
+// Brainfugo is a Go implementation of a Brainfuck interpreter.
 package main
 
 import (
@@ -7,11 +8,13 @@ import (
 	"os"
 )
 
+// main calls the brainfuck source scanner, then the evaluator.
 func main() {
 	src := scanSrc(os.Args[1])
 	eval(src)
 }
 
+// scanSrc reads the brainfuck source code file.
 func scanSrc(filename string) []byte {
 	src, err := ioutil.ReadFile(filename)
 	if err != nil {
@@ -21,6 +24,7 @@ func scanSrc(filename string) []byte {
 	return src
 }
 
+// eval examines each byte of the brainfuck source code and processes it accordingly.
 func eval(b []byte) {
 	c := [30000]byte{}
 	p := 0
